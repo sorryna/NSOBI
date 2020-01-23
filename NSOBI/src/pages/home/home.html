@@ -8,11 +8,15 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-list>
+    <ion-item text-center>
+      <button ion-button secondary>รายละเอียดการจัดทำดัชนีชี้วัด WMI</button>
+    </ion-item>
+    <ion-item text-center>
+      <button ion-button secondary (click)="goWaterIndexPage()">ดัชนีชี้วัดการจัดการน้ำ</button>
+    </ion-item>
+    <ion-item text-center>
+      <button ion-button secondary>สรุปข้อมูลการสำรวจน้ำ </button>
+    </ion-item>
+  </ion-list>
 </ion-content>
