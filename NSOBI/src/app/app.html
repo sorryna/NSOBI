@@ -10,18 +10,18 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
-      <button ion-button full color="danger">รายพื้นที่</button>
-      <button ion-button full>ปกครอง</button>
-      <button ion-button full>ลุ่มน้ำ</button>
-      <button ion-button full color="danger">รายดัชนีชี้วัด</button>
-      <button ion-button full>มิติที่ 1</button>
+      <button ion-button full color="danger" (click)="goWaterWMIPage()">รายพื้นที่</button>
+      <!-- <button ion-button full>ปกครอง</button>
+      <button ion-button full>ลุ่มน้ำ</button> -->
+      <button ion-button full color="danger" (click)="goWaterIndexPage()">รายดัชนีชี้วัด</button>
+      <!-- <button ion-button full>มิติที่ 1</button>
       <button ion-button full>มิติที่ 2</button>
       <button ion-button full>มิติที่ 3</button>
       <button ion-button full>มิติที่ 4</button>
       <button ion-button full>มิติที่ 5</button>
       <button ion-button full>มิติที่ 6</button>
       <button ion-button full>มิติที่ 7</button>
-      <button ion-button full>มิติที่ 8</button>
+      <button ion-button full>มิติที่ 8</button> -->
     </ion-list>
   </ion-content>
 

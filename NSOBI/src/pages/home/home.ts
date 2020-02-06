@@ -12,6 +12,6 @@ export class HomePage {
   }
 
   goWaterIndexPage(){
-    this.navCtrl.setRoot("WaterIndexPage");
+    this.navCtrl.setRoot("WaterWmiPage");
   }
 }
