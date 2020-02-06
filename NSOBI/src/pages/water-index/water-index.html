@@ -14,5 +14,37 @@
 </ion-header>
 
 <ion-content padding>
-
+  <div>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>มืติ</ion-label>
+          <ion-select interface="action-sheet" (ionChange)="onChange($event)">
+            <ion-option *ngFor="let item of mainWMI">{{ item.name }}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col *ngIf="subWMI != null">
+        <ion-item>
+          <ion-label>มิติย่อย</ion-label>
+          <ion-select interface="action-sheet" (ionChange)="onChange1($event)">
+            <ion-option *ngFor="let item of subWMI">{{ item.name }}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>ดัชนีชั้วัด</ion-label>
+          <ion-select interface="action-sheet" (ionChange)="onChange2($event)">
+            <ion-option *ngFor="let item of indexValue">{{ item.name }}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div>
+    <div>
+      <iframe width="1140" height="541.25" [src]="graph" frameborder="0" allowFullScreen="false"></iframe>
+    </div>
+  </div>
 </ion-content>
