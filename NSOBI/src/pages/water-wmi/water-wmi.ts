@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the WaterWmiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { AreaGraph, AGraph } from '../../models/AreaGraph';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class WaterWmiPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public graph: SafeResourceUrl;
+  public graph2: SafeResourceUrl;
+  public Area: any;
+  public areaGraph: AreaGraph[] = AGraph;
+  firstGraph ="";
+  firstGraph2 ="";
+  constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer) {
+    console.log(this.Area);
+    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph)
+    this.graph2 = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph2)
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
     console.log('ionViewDidLoad WaterWmiPage');
   }
 
+  onChange(item: any) {
+    console.log(item);
+    let find = this.areaGraph.find(it => it.reg == item);
+    console.log(find);
+    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(find.graph);
+  }
 }
