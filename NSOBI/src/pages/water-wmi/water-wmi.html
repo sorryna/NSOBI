@@ -24,22 +24,28 @@
       </ion-segment-button>
     </ion-segment>
   </div>
-  
+
   <div [ngSwitch]="Area">
-    <ion-list *ngSwitchCase="'Reg'">
+    <div *ngSwitchCase="'Reg'">
       <ion-item>
-        <ion-thumbnail item-start>
-          ใส่กราฟ แบ่งตามการปกครอง
-        </ion-thumbnail>
+        <ion-label>ภาค</ion-label>
+        <ion-select interface="action-sheet" (ionChange)="onChange($event)">
+          <ion-option *ngFor="let item of areaGraph">{{ item.reg }}</ion-option>
+        </ion-select>
       </ion-item>
-    </ion-list>
-  
-    <ion-list *ngSwitchCase="'Water'">
       <ion-item>
-        <ion-thumbnail item-start>
-          ใส่กราฟ แบ่งตามลุ่มน้ำ
-        </ion-thumbnail>
+        <div>
+          <iframe width="1140" height="541.25" [src]="graph" frameborder="0" allowFullScreen="false"></iframe>
+        </div>
       </ion-item>
-    </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'Water'">
+      <ion-item>
+        <div>
+          <iframe width="1140" height="541.25" [src]="graph2" frameborder="0" allowFullScreen="false"></iframe>
+        </div>
+      </ion-item>
+    </div>
   </div>
 </ion-content>
