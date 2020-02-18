@@ -27,15 +27,27 @@
 
   <div [ngSwitch]="Area">
     <div *ngSwitchCase="'Reg'">
-      <ion-item>
-        <ion-label>ภาค</ion-label>
-        <ion-select interface="action-sheet" (ionChange)="onChange($event)">
-          <ion-option *ngFor="let item of areaGraph">{{ item.reg }}</ion-option>
-        </ion-select>
-      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>ภาค</ion-label>
+            <ion-select interface="action-sheet" (ionChange)="onChange($event)">
+              <ion-option *ngFor="let item of areaGraph">{{ item.reg }}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>จังหวัด</ion-label>
+            <ion-select interface="action-sheet" (ionChange)="onChange2($event)">
+              <ion-option *ngFor="let item of lstPro">{{ item.CWT_NAME }}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
       <ion-item>
         <div>
-          <iframe width="1140" height="541.25" [src]="graph" frameborder="0" allowFullScreen="false"></iframe>
+          <iframe width="1140" height="541.25" [src]="regAreaGraph" frameborder="0" allowFullScreen="false"></iframe>
         </div>
       </ion-item>
     </div>
@@ -43,9 +55,16 @@
     <div *ngSwitchCase="'Water'">
       <ion-item>
         <div>
-          <iframe width="1140" height="541.25" [src]="graph2" frameborder="0" allowFullScreen="false"></iframe>
+          <iframe width="1140" height="541.25" [src]="watereAreaGraph" frameborder="0" allowFullScreen="false"></iframe>
         </div>
       </ion-item>
     </div>
+  </div>
+  <div *ngIf="Area == null">
+    <ion-item>
+      <div>
+        <iframe width="1140" height="541.25" [src]="allInThailandGraph" frameborder="0" allowFullScreen="false"></iframe>
+      </div>
+    </ion-item>
   </div>
 </ion-content>

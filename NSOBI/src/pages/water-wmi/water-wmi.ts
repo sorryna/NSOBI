@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
-import { AreaGraph, AGraph } from '../../models/AreaGraph';
+import { Reg, RegGraph } from '../../models/Reg';
+import { Province, provinceData } from '../../models/ProvinceData';
 
 @IonicPage()
 @Component({
@@ -10,16 +11,21 @@ import { AreaGraph, AGraph } from '../../models/AreaGraph';
 })
 export class WaterWmiPage {
 
-  public graph: SafeResourceUrl;
-  public graph2: SafeResourceUrl;
+  public allInThailandGraph: SafeResourceUrl;
+  public watereAreaGraph: SafeResourceUrl;
+  public regAreaGraph: SafeResourceUrl;
   public Area: any;
-  public areaGraph: AreaGraph[] = AGraph;
-  firstGraph ="https://app.powerbi.com/reportEmbed?reportId=36b6765d-6fc7-4fb9-bc76-72c07a7dc287&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
-  firstGraph2 ="https://app.powerbi.com/reportEmbed?reportId=91038c2e-0282-417f-bdb6-296947d52362&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
+  public areaGraph: Reg[] = RegGraph;
+  public lstPro: Province[];
+  public ProvinceGraph: Province[] = provinceData;
+  allInThailand = "https://app.powerbi.com/reportEmbed?reportId=36b6765d-6fc7-4fb9-bc76-72c07a7dc287&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
+  watereArea = "https://app.powerbi.com/reportEmbed?reportId=91038c2e-0282-417f-bdb6-296947d52362&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
+  regArea = "";
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer) {
     console.log(this.Area);
-    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph)
-    this.graph2 = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph2)
+    this.allInThailandGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.allInThailand);
+    this.watereAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.watereArea);
+    this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.regArea);
   }
 
   ionViewDidEnter() {
@@ -27,9 +33,13 @@ export class WaterWmiPage {
   }
 
   onChange(item: any) {
-    console.log(item);
     let find = this.areaGraph.find(it => it.reg == item);
-    console.log(find);
-    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(find.graph);
+    this.lstPro = this.ProvinceGraph.filter(it => it.REG == find.regId);
+    this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(find.graph);
+  }
+
+  onChange2(item: any) {
+    let find = this.ProvinceGraph.find(it => it.CWT_NAME == item);
+    this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(find.Graph);
   }
 }
