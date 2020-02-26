@@ -23,7 +23,7 @@ export class WaterIndexPage {
   public subWMI: SubWMI[] = null;
   public indexValue: IndexWWMI[] = null;
 
-  firstGraph = 'https://app.powerbi.com/reportEmbed?reportId=a9e6c25f-6de4-4921-9295-62b206a9fcf2&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ==';
+  firstGraph = 'https://app.powerbi.com/reportEmbed?reportId=dd4bc57c-1614-42b3-bd9b-13a67edef7ec&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D';
   public graph: SafeResourceUrl; 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer) {
