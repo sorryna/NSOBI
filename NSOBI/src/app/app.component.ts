@@ -21,7 +21,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
+      { title: 'หน้าหลัก', component: HomePage },
       // { title: 'List', component: ListPage }
     ];
 
@@ -40,6 +40,10 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  homePage(){
+    this.nav.popToRoot();
   }
 
   goWaterIndexPage(){

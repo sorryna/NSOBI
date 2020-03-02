@@ -14,4 +14,8 @@ export class HomePage {
   goWaterIndexPage(){
     this.navCtrl.setRoot("WaterWmiPage");
   }
+
+  WmiMenuPage(){
+    this.navCtrl.push("WmiMenuPage");
+  }
 }

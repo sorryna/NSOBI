@@ -20,3 +20,32 @@
     background-repeat: no-repeat;
     background-position: center bottom;
   }
+
+.bgimg2{
+    background-size: 95%;
+    background-image: url("../../assets/imgs/waterBG.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+
+.fontLa{
+  font-size: xx-large;
+}
+
+.fontL{
+  font-size: large;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid lightgray;
+  text-align: left;
+  vertical-align: text-top;
+}
