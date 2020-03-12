@@ -32,13 +32,13 @@
       </ion-grid>
       <ion-grid>
         <ion-col col-12>
-          <a download href="../../assets/data/thai.xlsx">ประเทศไทย</a>
+          <a download href="../../assets/data/thai.xlsx">ทั้งประเทศไทย</a>
         </ion-col>
         <ion-row>
-          <ion-col col-3><a download href="../../assets/data/เหนือ2.xlsx">เหนือ</a> </ion-col>
-          <ion-col col-3><a download href="../../assets/data/กลาง2.xlsx">กลาง</a></ion-col>
-          <ion-col col-3><a download href="../../assets/data/อีสาน2.xlsx">ตะวันออกเฉียงเหนือ</a></ion-col>
-          <ion-col col-3><a download href="../../assets/data/ใต้.xlsx">ใต้</a></ion-col>
+          <ion-col col-3><a download href="../../assets/data/กลาง2.xlsx">ภาคกลาง</a></ion-col>
+          <ion-col col-3><a download href="../../assets/data/อีสาน2.xlsx">ภาคตะวันออกเฉียงเหนือ</a></ion-col>
+          <ion-col col-3><a download href="../../assets/data/เหนือ2.xlsx">ภาคเหนือ</a> </ion-col>
+          <ion-col col-3><a download href="../../assets/data/ใต้.xlsx">ภาคใต้</a></ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-3><a download href="../../assets/data/กทม.xlsx">กรุงเทพมหานคร</a> </ion-col>
@@ -197,110 +197,52 @@
     <div *ngSwitchCase="'Water'">
       <ion-grid>
         <ion-row>
-          <ion-col col-6>ลุ่มน้ำ</ion-col>
-          <ion-col col-6>ลุ่มน้ำย่อย</ion-col>
+          <ion-col>ลุ่มน้ำประเทศไทย</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำเจ้าพระยา </ion-col>
-          <ion-col col-6>ที่ราบแม่น้ำเจ้าพระยา </ion-col>
+          <ion-col col-3>แม่น้ำเจ้าพระยา </ion-col>
+          <ion-col col-3>แม่น้ำเพชรบุรี </ion-col>
+          <ion-col col-3>แม่น้ำแม่กลอง </ion-col>
+          <ion-col col-3>แม่น้ำโขง </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำเพชรบุรี </ion-col>
-          <ion-col col-6>บึงบรเพ็ด </ion-col>
+          <ion-col col-3>แม่น้ำกก </ion-col>
+          <ion-col col-3>แม่น้ำชี </ion-col>
+          <ion-col col-3>แม่น้ำตาปี </ion-col>
+          <ion-col col-3>แม่น้ำท่าจีน </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำแม่กลอง </ion-col>
-          <ion-col col-6>แม่น้ำเพชรบุรีตอนบน </ion-col>
+          <ion-col col-3>แม่น้ำน่าน </ion-col>
+          <ion-col col-3>แม่น้ำบางปะกง </ion-col>
+          <ion-col col-3>แม่น้ำปราจีนบุรี </ion-col>
+          <ion-col col-3>แม่น้ำปัตตานี </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำโขง </ion-col>
-          <ion-col col-6>แม่น้ำเพชรบุรีตอนล่าง </ion-col>
+          <ion-col col-3>แม่น้ำป่าสัก </ion-col>
+          <ion-col col-3>แม่น้ำปิง </ion-col>
+          <ion-col col-3>แม่น้ำมูล </ion-col>
+          <ion-col col-3>แม่น้ำยม </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำกก </ion-col>
-          <ion-col col-6>ห้วยแม่ประจัน </ion-col>
+          <ion-col col-3>แม่น้ำวัง </ion-col>
+          <ion-col col-3>แม่น้ำสะแกกรัง </ion-col>
+          <ion-col col-3>แม่น้ำสาละวิน </ion-col>
+          <ion-col col-3>โตนเลสาป </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำชี </ion-col>
-          <ion-col col-6>แม่น้ำแควใหญ่ตอนบน </ion-col>
+          <ion-col col-3>ชายฝั่งทะเลตะวันออก </ion-col>
+          <ion-col col-3>ชายฝั่งทะเลประจวบคีรีขันธ์ </ion-col>
+          <ion-col col-3>ทะเลสาบสงขลา </ion-col>
+          <ion-col col-3>ภาคใต้ฝั่งตะวันตก </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>แม่น้ำตาปี </ion-col>
-          <ion-col col-6>แม่น้ำแควใหญ่ตอนล่าง </ion-col>
+          <ion-col col-3>ภาคใต้ฝั่งตะวันออก </ion-col>
+          <ion-col col-3></ion-col>
+          <ion-col col-3></ion-col>
+          <ion-col col-3></ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำท่าจีน </ion-col>
-          <ion-col col-6>แม่น้ำแควน้อยตอนบน </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำน่าน </ion-col>
-          <ion-col col-6>แม่น้ำแควน้อยตอนล่าง </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำบางปะกง </ion-col>
-          <ion-col col-6>ที่ราบแม่น้ำแม่กลอง </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำปราจีนบุรี </ion-col>
-          <ion-col col-6>ลำภาชี </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำปัตตานี </ion-col>
-          <ion-col col-6>ห้วยแม่จัน </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำป่าสัก </ion-col>
-          <ion-col col-6>ห้วยแม่ละมุง </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำปิง </ion-col>
-          <ion-col col-6>ห้วยขาแข้ง </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำมูล </ion-col>
-          <ion-col col-6>ห้วยตะเพิน </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำยม </ion-col>
-          <ion-col col-6>ห้วยปิลอก </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำวัง </ion-col>
-          <ion-col col-6>แม่น้ำเลยตอนล่าง </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำสะแกกรัง </ion-col>
-          <ion-col col-6>แม่น้ำโขงตอนบน </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>แม่น้ำสาละวิน </ion-col>
-          <ion-col col-6>แม่น้ำโขงตอนล่าง </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>โตนเลสาป </ion-col>
-          <ion-col col-6>แม่น้ำโขงส่วนที่ 2 </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>ชายฝั่งทะเลตะวันออก </ion-col>
-          <ion-col col-6>แม่น้ำโขงส่วนที่ 3 </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>ชายฝั่งทะเลประจวบคีรีขันธ์ </ion-col>
-          <ion-col col-6>แม่น้ำโขงส่วนที่ 4 </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>ทะเลสาบสงขลา </ion-col>
-          <ion-col col-6>แม่น้ำโขงส่วนที่ 5 </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>ภาคใต้ฝั่งตะวันตก </ion-col>
-          <ion-col col-6>แม่น้ำโขงส่วนที่ 6 </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>ภาคใต้ฝั่งตะวันออก </ion-col>
-          <ion-col col-6>แม่น้ำโขงส่วนที่ 7 </ion-col>
-        </ion-row>
-        <ion-row>
+       
+        <!-- <ion-row>
           <ion-col col-6> </ion-col>
           <ion-col col-6>แม่น้ำโขงส่วนที่ 8 </ion-col>
         </ion-row>
@@ -1220,7 +1162,7 @@
         <ion-row>
           <ion-col col-6> </ion-col>
           <ion-col col-6>ภาคใต้ฝั่งตะวันออกส่วนที่ 4</ion-col>
-        </ion-row>
+        </ion-row> -->
 
         <!--  <ion-row>
           <ion-col col-6> </ion-col>

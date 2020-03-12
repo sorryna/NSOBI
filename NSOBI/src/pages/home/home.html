@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-navbar>
+  <!-- <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
-  </ion-navbar>
+  </ion-navbar> -->
 </ion-header>
 
 <ion-content padding class="bgimg">
@@ -13,15 +13,24 @@
       <img src="../../assets/imgs/logowaterproject.png">
     </ion-col>
   </ion-row>
-  <ion-list>
-    <div text-center>
-      <button ion-button secondary (click)="WmiMenuPage()">รายละเอียดการจัดทำดัชนีชี้วัดการจัดการน้ำ (WMI)</button>
-    </div>
-    <div text-center>
-      <button ion-button secondary (click)="goWaterIndexPage()">ดัชนีชี้วัดการจัดการน้ำ (WMI)</button>
-    </div>
-    <div text-center>
-      <button ion-button secondary (click)="goDownload()">สรุปข้อมูลการสำรวจน้ำ </button>
-    </div>
-  </ion-list>
+
+  <ion-row>
+    
+    <ion-col col-3>
+      <ion-list>
+        <div>
+          <button ion-button secondary (click)="WmiMenuPage()">รายละเอียดการจัดทำดัชนีชี้วัดการจัดการน้ำ (WMI)</button>
+        </div>
+        <div>
+          <button ion-button secondary (click)="goWaterIndexPage()">ดัชนีชี้วัดการจัดการน้ำ (WMI)</button>
+        </div>
+        <div>
+          <button ion-button secondary (click)="goDownload()">สรุปข้อมูลการสำรวจน้ำ </button>
+        </div>
+      </ion-list>
+    </ion-col>
+    <ion-col col-9>
+      <iframe width="1140" height="541.25" [src]="regAreaGraph" frameborder="0" allowFullScreen="false"></iframe>
+    </ion-col>
+  </ion-row>
 </ion-content>
