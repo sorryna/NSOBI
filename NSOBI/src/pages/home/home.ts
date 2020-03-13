@@ -17,7 +17,7 @@ export class HomePage {
   }
 
   goWaterIndexPage(){
-    this.navCtrl.setRoot("WaterWmiPage");
+    this.navCtrl.setRoot("WaterIndexPage");
   }
 
   WmiMenuPage(){
@@ -25,5 +25,9 @@ export class HomePage {
   }
   goDownload(){
     this.navCtrl.push("DownloaddataPage");
+  }
+
+  openWaterArea(){
+    
   }
 }
