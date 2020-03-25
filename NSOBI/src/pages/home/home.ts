@@ -23,8 +23,9 @@ export class HomePage {
   WmiMenuPage(){
     this.navCtrl.push("WmiMenuPage");
   }
+
   goDownload(){
-    this.navCtrl.push("DownloaddataPage");
+    open("https://demowaters.azurewebsites.net/#/downloaddata");
   }
 
   openWaterArea(){
