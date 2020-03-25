@@ -9,7 +9,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 export class HomePage {
 
   public regAreaGraph: SafeResourceUrl;
-  allInThailand = "https://app.powerbi.com/reportEmbed?reportId=995b096f-aea3-4795-b821-f8a29a3c82bb&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
+  allInThailand = "https://app.powerbi.com/reportEmbed?reportId=5d663108-96cc-4ef2-b8c5-f2107a14c254&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
 
 
   constructor(public navCtrl: NavController, public sanitizer: DomSanitizer) {
