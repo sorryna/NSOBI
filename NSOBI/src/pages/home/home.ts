@@ -9,7 +9,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 export class HomePage {
 
   public regAreaGraph: SafeResourceUrl;
-  allInThailand = "https://app.powerbi.com/reportEmbed?reportId=44d7a968-aa31-48f9-8438-f646e334de1a&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
+  allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiMWEzYmVkYmMtOWYwYS00NzFmLTk5NjUtZjJjZGFlMWY4MzM4IiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D";
 
 
   constructor(public navCtrl: NavController, public sanitizer: DomSanitizer) {
@@ -21,13 +21,17 @@ export class HomePage {
   }
 
   WmiMenuPage(){
-    this.navCtrl.push("WmiMenuPage");
+    // this.navCtrl.push("WmiMenuPage");
+    // http://localhost:8100/
+    open("https://watersurvey.azurewebsites.net/#/wmi-menu");
+    // open("http://localhost:8100//#/wmi-menu");
+
   }
 
   goDownload(){
     // 
     // open("https://demowaters.azurewebsites.net/#/downloaddata");
-    open("http://localhost:8100//#/downloaddata");
+    open("https://watersurvey.azurewebsites.net/#/downloaddata");
   }
 
   openWaterArea(){
