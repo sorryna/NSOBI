@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { Reg, RegGraph } from '../../models/Reg';
 import { Province, provinceData } from '../../models/ProvinceData';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -12,34 +13,45 @@ import { Province, provinceData } from '../../models/ProvinceData';
 export class WaterWmiPage {
 
   public allInThailandGraph: SafeResourceUrl;
-  public watereAreaGraph: SafeResourceUrl;
-  public regAreaGraph: SafeResourceUrl;
-  public Area: any;
-  public areaGraph: Reg[] = RegGraph;
-  public lstPro: Province[];
-  public ProvinceGraph: Province[] = provinceData;
-  allInThailand = "https://app.powerbi.com/reportEmbed?reportId=995b096f-aea3-4795-b821-f8a29a3c82bb&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
-  watereArea = "https://app.powerbi.com/reportEmbed?reportId=b2c826bf-da5e-4d31-b0a2-fc36b2177c69&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
-  regArea = "https://app.powerbi.com/reportEmbed?reportId=c9cf0e8a-11a2-4f25-8373-75febec326e4&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D";
+  WMImenu: any;
+  allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiZTU4MzY2NmEtZjA1OS00MDc2LThmZWItMzBhNGZkMGZkN2ZkIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D";
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer) {
-    console.log(this.Area);
     this.allInThailandGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.allInThailand);
-    this.watereAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.watereArea);
-    this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.regArea);
   }
 
   ionViewDidEnter() {
     console.log('ionViewDidLoad WaterWmiPage');
   }
 
-  onChange(item: any) {
-    let find = this.areaGraph.find(it => it.reg == item);
-    this.lstPro = this.ProvinceGraph.filter(it => it.REG == find.regId);
-    this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(find.graph);
+  goToPage() {
+    console.log(this.WMImenu);
+    if (this.WMImenu == '1') {
+      this.navCtrl.setRoot("WaterIndexPage")
+    }
+    if (this.WMImenu == '2') {
+      this.navCtrl.setRoot("WaterWmiPage")
+    }
+    if (this.WMImenu == '3') {
+      this.navCtrl.setRoot("WmiMenuPage")
+    }
+    if (this.WMImenu == '4') {
+      this.navCtrl.setRoot("DownloaddataPage")
+    }
+    if (this.WMImenu == '5') {
+      this.navCtrl.setRoot("InfoFirstPage")
+    }
+    if (this.WMImenu == '6') {
+      this.navCtrl.setRoot("InfoSecondPage")
+    }
+    if (this.WMImenu == '7') {
+      this.navCtrl.setRoot("InfoThirdPage")
+    }
+    if (this.WMImenu == '8') {
+      this.navCtrl.setRoot("InfofourthPage")
+    }
   }
 
-  // onChange2(item: any) {
-  //   let find = this.ProvinceGraph.find(it => it.CWT_NAME == item);
-  //   this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(find.Graph);
-  // }
+  goHomePage() {
+    this.navCtrl.setRoot(HomePage)
+  }
 }

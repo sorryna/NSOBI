@@ -4,6 +4,7 @@ import { MainWMI, Main } from '../../models/WMI';
 import { SubWMI, Sub } from '../../models/SubWMI';
 import { IndexWWMI, IndexWMIValue } from '../../models/IndexWMI';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the WaterIndexPage page.
@@ -23,42 +24,48 @@ export class WaterIndexPage {
   public subWMI: SubWMI[] = null;
   public indexValue: IndexWWMI[] = null;
 
-  firstGraph = 'https://app.powerbi.com/reportEmbed?reportId=dd4bc57c-1614-42b3-bd9b-13a67edef7ec&autoAuth=true&ctid=93793cef-3400-4bdb-81f4-925ccb3a6924&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D';
-  public graph: SafeResourceUrl; 
-
+  firstGraph = 'https://app.powerbi.com/view?r=eyJrIjoiYzJmMzI2ZmEtNGQ3Mi00OGU3LWJmMzUtNjljY2MwYWRlNTFlIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D';
+  public graph: SafeResourceUrl;
+  WMImenu: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WaterIndexPage');
+    // console.log('ionViewDidLoad WaterIndexPage');
     this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph)
-    console.log(this.graph);
-    
+    // console.log(this.graph);
+
   }
-
-  onChange(name: string) {
-    this.subWMI = Sub;
-    this.indexValue = null;
-    let main = this.mainWMI.find(it => it.name == name) || null;
-    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(main.graph);
-
-    if (main) {
-      this.subWMI = this.subWMI.filter(it => it.main == main.code);
-      if (this.subWMI.length == 0) {
-        this.subWMI = null;
-        this.indexValue = IndexWMIValue.filter(it => it.main == main.code);
-      }
+  
+  goToPage(){
+    console.log(this.WMImenu);
+    if (this.WMImenu == '1') {
+      this.navCtrl.setRoot("WaterIndexPage")
+    }
+    if (this.WMImenu == '2') {
+      this.navCtrl.setRoot("WaterWmiPage")
+    }
+    if (this.WMImenu == '3') {
+      this.navCtrl.setRoot("WmiMenuPage")
+    }
+    if (this.WMImenu == '4') {
+      this.navCtrl.setRoot("DownloaddataPage")
+    }
+    if (this.WMImenu == '5') {
+      this.navCtrl.setRoot("InfoFirstPage")
+    }
+    if (this.WMImenu == '6') {
+      this.navCtrl.setRoot("InfoSecondPage")
+    }
+    if (this.WMImenu == '7') {
+      this.navCtrl.setRoot("InfoThirdPage")
+    }
+    if (this.WMImenu == '8') {
+      this.navCtrl.setRoot("InfofourthPage")
     }
   }
 
-  onChange1(name: string) {
-    let code = this.subWMI.find(it => it.name == name);
-    this.indexValue = IndexWMIValue.filter(it => it.sub == code.code);
-    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(code.graph);
-  }
-
-  onChange2(item: string) {
-    let order = IndexWMIValue.find(it => it.name == item);
-    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(order.graph);
+  goHomePage(){
+      this.navCtrl.setRoot(HomePage)
   }
 }
