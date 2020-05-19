@@ -13,33 +13,27 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col text-center col-1>
-      <button ion-button secondary (click)="goHomePage()">หน้าหลัก</button>
-    </ion-col>
-    <ion-col col-4>
-      <ion-item>
-        <ion-label>ดัชนีชี้วัดการจัดการน้ำ</ion-label>
-        <ion-select interface="action-sheet" [(ngModel)]="WMImenu" (ionChange)="goToPage()">
-          <ion-option value="1">รายพื้นที่การปกครอง</ion-option>
-          <ion-option value="2">รายลุ่มน้ำ</ion-option>
-          <ion-option value="3">รายตัวชี้วัด</ion-option>
-          <ion-option value="4">สรุปข้อมูลการสำรวจ</ion-option>
-        </ion-select>
-      </ion-item>
-  
-    </ion-col>
-    <ion-col col-6>
-      <ion-item>
-        <ion-label>รายละเอียด</ion-label>
-        <ion-select interface="action-sheet" [(ngModel)]="WMImenu" (ionChange)="goToPage()" >
-          <ion-option value="5">โครงการระบบการจัดเก็บข้อมูลฯ</ion-option>
-          <ion-option value="6">ขั้นตอนการจัดทำดัชนีชี้วัดการจัดการน้ำ</ion-option>
-          <ion-option value="7">วิธีการประเมินดัชนีชี้วัดการจัดการน้ำ</ion-option>
-          <ion-option value="8">ประโยชน์ของดัชนีชี้วัดการจัดการน้ำ</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-    <ion-col ></ion-col><ion-col ></ion-col>
+    <nav>
+      <ul class="nav">
+        <li><a href="http://localhost:8100/">หน้าหลัก</a></li>
+        <li><a>ดัชนีชี้วัดการจัดการน้ำ</a>
+          <ul>
+            <li><a href="http://localhost:8100/#/water-index">รายพื้นที่การปกครอง</a></li>
+            <li><a href="http://localhost:8100/#/water-wmi">รายลุ่มน้ำ</a></li>
+            <li><a href="http://localhost:8100/#/wmi-menu">รายตัวชี้วัด</a></li>
+          </ul>
+        </li>
+        <li><a href="http://localhost:8100/#/downloaddata">สรุปข้อมูลการสำรวจ</a></li>
+        <li><a>รายละเอียด</a>
+          <ul>
+            <li><a href="http://localhost:8100/#/info-first">โครงการระบบการจัดเก็บข้อมูลฯ</a></li>
+            <li><a href="http://localhost:8100/#/info-second">ขั้นตอนการจัดทำดัชนีชี้วัดการจัดการน้ำ</a></li>
+            <li><a href="http://localhost:8100/#/info-third">วิธีการประเมินดัชนีชี้วัดการจัดการน้ำ</a></li>
+            <li><a href="http://localhost:8100/#/infofourth">ประโยชน์ของดัชนีชี้วัดการจัดการน้ำ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
       
   </ion-row>
 </ion-header>
