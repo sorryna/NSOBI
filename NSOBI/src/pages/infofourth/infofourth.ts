@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
-
-/**
- * Generated class for the InfofourthPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -17,7 +9,8 @@ import { HomePage } from '../home/home';
 export class InfofourthPage {
 
   public WMImenu: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController) {
+    this.menu.enable(false, "myMenu");
   }
 
   ionViewDidLoad() {

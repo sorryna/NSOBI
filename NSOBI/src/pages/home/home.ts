@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -13,8 +13,9 @@ export class HomePage {
   allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiMWEzYmVkYmMtOWYwYS00NzFmLTk5NjUtZjJjZGFlMWY4MzM4IiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D";
 
 
-  constructor(public navCtrl: NavController, public sanitizer: DomSanitizer) {
+  constructor(public navCtrl: NavController, public sanitizer: DomSanitizer, public menu: MenuController) {
     this.regAreaGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.allInThailand);
+    this.menu.enable(false, "myMenu");
   }
   
 }

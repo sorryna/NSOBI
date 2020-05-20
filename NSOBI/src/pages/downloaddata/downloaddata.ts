@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -12,13 +11,13 @@ export class DownloaddataPage {
 
   Area: any;
   WMImenu: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menu:MenuController) {
+    this.menu.enable(false, "myMenu");
     this.Area = "Reg";
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DownloaddataPage');
   }
-
 
 }
