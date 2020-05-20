@@ -1,6 +1,11 @@
 // http://ionicframework.com/docs/theming/
 
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+$font-family-base: "Sarabun", sans-serif !default;
 
+* {
+  font-family: 'Sarabun';
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

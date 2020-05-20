@@ -38,6 +38,15 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-row>
+    <iframe width="100%" height="750" [src]="regAreaGraph" frameborder="0" allowFullScreen="true" marginwidth="5"></iframe>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      ความหมายของแต่ละมิติ
+    </ion-col>
+  </ion-row>
   <ion-row>
     <ion-col>
       มิติที่ 1 มิติต้นทุนทรัพยากรน้ำ
@@ -66,8 +75,5 @@
       มิติที่ 8 มิติการบริหารจัดการทรัพยากรน้ำ
     </ion-col>
 
-  </ion-row>
-  <ion-row>
-    <iframe width="1500" height="750" [src]="regAreaGraph" frameborder="0" allowFullScreen="false"></iframe>
   </ion-row>
 </ion-content>
