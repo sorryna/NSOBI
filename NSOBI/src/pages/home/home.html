@@ -1,7 +1,7 @@
 <ion-header class="bgheader">
   <ion-row>
     <ion-col col-2>
-      <img src="../../assets/imgs/logowaterproject.png" style="width: 65%;">
+      <img src="../../assets/imgs/photo6233367327987051368.jpg" style="width: 65%;">
     </ion-col>
     <ion-col text-center>
       <label>
@@ -10,39 +10,39 @@
           เพื่อการบริหารจัดการทรัพยากรน้ำอย่างยั่งยืน <br>ในลุ่มน้ำทั่วประเทศ จำนวน 25 ลุ่มน้ำ (โครงการระยะที่ 1)
         </h3>
       </label>
+      <nav text-left>
+        <ul class="nav">
+          <li><a href="https://watersurvey.azurewebsites.net/">หน้าหลัก</a></li>
+          <li><a>ดัชนีชี้วัดการจัดการน้ำ</a>
+            <ul>
+              <li><a href="https://watersurvey.azurewebsites.net/#/water-index">รายพื้นที่การปกครอง</a></li>
+              <li><a href="https://watersurvey.azurewebsites.net/#/water-wmi">รายลุ่มน้ำ</a></li>
+              <li><a href="https://watersurvey.azurewebsites.net/#/wmi-menu">รายตัวชี้วัด</a></li>
+            </ul>
+          </li>
+          <li><a href="https://watersurvey.azurewebsites.net/#/downloaddata">ข้อมมูลดัชนีชี้วัดการจัดการน้ำ</a></li>
+          <li><a>รายละเอียด โครงการฯ</a>
+            <ul>
+              <li><a href="https://watersurvey.azurewebsites.net/#/info-first">โครงการระบบการจัดเก็บข้อมูลฯ</a></li>
+              <li><a href="https://watersurvey.azurewebsites.net/#/info-second">ขั้นตอนการจัดทำดัชนีชี้วัดการจัดการน้ำ</a></li>
+              <li><a href="https://watersurvey.azurewebsites.net/#/info-third">วิธีการประเมินดัชนีชี้วัดการจัดการน้ำ</a></li>
+              <li><a href="https://watersurvey.azurewebsites.net/#/infofourth">ประโยชน์ของดัชนีชี้วัดการจัดการน้ำ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </ion-col>
-  </ion-row>
-  <ion-row>
-    <nav>
-      <ul class="nav">
-        <li><a href="https://watersurvey.azurewebsites.net/">หน้าหลัก</a></li>
-        <li><a>ดัชนีชี้วัดการจัดการน้ำ</a>
-          <ul>
-            <li><a href="https://watersurvey.azurewebsites.net/#/water-index">รายพื้นที่การปกครอง</a></li>
-            <li><a href="https://watersurvey.azurewebsites.net/#/water-wmi">รายลุ่มน้ำ</a></li>
-            <li><a href="https://watersurvey.azurewebsites.net/#/wmi-menu">รายตัวชี้วัด</a></li>
-          </ul>
-        </li>
-        <li><a href="https://watersurvey.azurewebsites.net/#/downloaddata">สรุปข้อมูลการสำรวจ</a></li>
-        <li><a>รายละเอียด</a>
-          <ul>
-            <li><a href="https://watersurvey.azurewebsites.net/#/info-first">โครงการระบบการจัดเก็บข้อมูลฯ</a></li>
-            <li><a href="https://watersurvey.azurewebsites.net/#/info-second">ขั้นตอนการจัดทำดัชนีชี้วัดการจัดการน้ำ</a></li>
-            <li><a href="https://watersurvey.azurewebsites.net/#/info-third">วิธีการประเมินดัชนีชี้วัดการจัดการน้ำ</a></li>
-            <li><a href="https://watersurvey.azurewebsites.net/#/infofourth">ประโยชน์ของดัชนีชี้วัดการจัดการน้ำ</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
   </ion-row>
 </ion-header>
 
 <ion-content>
-
+  <div text-center>
+    <h3>ดัชนีชี้วัดการจัดการน้ำ (WMI) ระดับประเทศ</h3>
+  </div>
   <ion-row>
     <iframe width="100%" height="750" [src]="regAreaGraph" frameborder="0" allowFullScreen="true"></iframe>
   </ion-row>
-  <ion-row>
+  <!-- <ion-row>
     <ion-col>
       มิติที่ 1 มิติต้นทุนทรัพยากรน้ำ
     </ion-col>
@@ -69,5 +69,5 @@
     <ion-col>
       มิติที่ 8 มิติการบริหารจัดการทรัพยากรน้ำ
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 </ion-content>

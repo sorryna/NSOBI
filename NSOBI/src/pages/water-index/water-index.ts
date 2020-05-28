@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
 import { MainWMI, Main } from '../../models/WMI';
 import { SubWMI } from '../../models/SubWMI';
 import { IndexWWMI } from '../../models/IndexWMI';
@@ -19,8 +19,18 @@ export class WaterIndexPage {
   firstGraph = 'https://app.powerbi.com/view?r=eyJrIjoiYzJmMzI2ZmEtNGQ3Mi00OGU3LWJmMzUtNjljY2MwYWRlNTFlIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D';
   public graph: SafeResourceUrl;
   WMImenu: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController, public alertCtrl: AlertController) {
     this.menu.enable(false, "myMenu");
+    this.popUp();
+  }
+
+  popUp(){
+    const alert = this.alertCtrl.create({
+      subTitle:"หมายเหตุ:",
+      message:" การนำเสนอแผนที่ระดับประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
+      buttons: ["ตกลง"]
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
