@@ -24,11 +24,11 @@ export class WaterIndexPage {
     this.popUp();
   }
 
-  popUp(){
+  popUp() {
     const alert = this.alertCtrl.create({
-      subTitle:"หมายเหตุ:",
-      message:" การนำเสนอแผนที่ระดับประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
-      buttons: ["ตกลง"]
+      subTitle: "หมายเหตุ : การนำเสนอแผนที่ระดับประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
+      buttons: ["ตกลง"],
+      cssClass: "my-custom-class"
     });
     alert.present();
   }
