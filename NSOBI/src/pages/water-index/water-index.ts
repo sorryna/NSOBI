@@ -27,7 +27,7 @@ export class WaterIndexPage {
   popUp(){
     const alert = this.alertCtrl.create({
       subTitle:"หมายเหตุ:",
-      message:" การนำเสนอแผนที่ระดับประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
+      message:" การนำเสนอแผนที่ระดับตำบลทั้งประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
       buttons: ["ตกลง"]
     });
     alert.present();
