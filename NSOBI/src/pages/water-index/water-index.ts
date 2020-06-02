@@ -26,7 +26,8 @@ export class WaterIndexPage {
 
   popUp() {
     const alert = this.alertCtrl.create({
-      subTitle: "หมายเหตุ : การนำเสนอแผนที่ระดับประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
+      subTitle: "หมายเหตุ : ",
+      message: "การนำเสนอแผนที่ระดับประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
       buttons: ["ตกลง"],
       cssClass: "my-custom-class"
     });
