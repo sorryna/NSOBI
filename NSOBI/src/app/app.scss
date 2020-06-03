@@ -1,11 +1,18 @@
 // http://ionicframework.com/docs/theming/
 
-@import url('https://fonts.googleapis.com/css?family=Tahoma');
-$font-family-base: "Tahoma", sans-serif !default;
-
+// @import url('https://fonts.googleapis.com/css?family=Tahoma');
+@font-face {
+  font-family: 'Tahoma';
+  src: url('../assets/fonts/Tahoma/tahoma.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+// @import @font-face  
+$font-family-base: "Tahoma", sans-serif;
 * {
   font-family: 'Tahoma';
 }
+
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

@@ -28,7 +28,8 @@ export class WaterIndexPage {
     const alert = this.alertCtrl.create({
       subTitle:"หมายเหตุ:",
       message:" การนำเสนอแผนที่ระดับตำบลทั้งประเทศมีข้อมูลมากเกินไป กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
-      buttons: ["ตกลง"]
+      buttons: ["ตกลง"],
+      
     });
     alert.present();
   }
