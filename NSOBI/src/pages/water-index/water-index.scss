@@ -8,6 +8,7 @@ page-water-index {
 }
 
 .alert-message{
+    text-align: center;
     overflow: hidden;
     font-size: x-large;
 }
@@ -20,4 +21,8 @@ page-water-index {
 .alert-head{
     font-size: 25px !important;
     // color: brown;
+}
+
+.button-inner{
+    font-size: 18px;
 }
