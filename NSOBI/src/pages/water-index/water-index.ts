@@ -16,7 +16,7 @@ export class WaterIndexPage {
   public subWMI: SubWMI[] = null;
   public indexValue: IndexWWMI[] = null;
 
-  firstGraph = 'https://app.powerbi.com/view?r=eyJrIjoiYzJmMzI2ZmEtNGQ3Mi00OGU3LWJmMzUtNjljY2MwYWRlNTFlIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D';
+  firstGraph = 'https://app.powerbi.com/view?r=eyJrIjoiYTEzZjRhZjItNGQ0Yy00N2IwLThhZjEtZmRmOGM1ZTBhYThhIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D';
   public graph: SafeResourceUrl;
   WMImenu: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController, public alertCtrl: AlertController) {
@@ -27,7 +27,7 @@ export class WaterIndexPage {
   popUp() {
     const alert = this.alertCtrl.create({
       // subTitle:"หมายเหตุ:",
-      message:"เนื่องจากการแสดงขอบเขตแผนที่ระดับตำบลทั้งประเทศมีข้อมูลมากเกินไป <br> ดังนั้น เพื่อการแสดงผลที่สมบูรณ์ กรุณราเลือกพื้นที่เพื่อดูรายละเอียด",
+      message:"เนื่องจากการแสดงขอบเขตแผนที่ระดับตำบลทั้งประเทศมีข้อมูลมากเกินไป <br> ดังนั้น เพื่อการแสดงผลที่สมบูรณ์ กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
       buttons: ["ตกลง"],
       
     });
