@@ -27,14 +27,16 @@ export class WaterIndexPage {
   popUp() {
     const alert = this.alertCtrl.create({
       // subTitle:"หมายเหตุ:",
-      message:"เนื่องจากการแสดงขอบเขตแผนที่ระดับตำบลทั้งประเทศมีข้อมูลมากเกินไป <br> ดังนั้น เพื่อการแสดงผลที่สมบูรณ์ กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
+      message: "เนื่องจากการแสดงขอบเขตแผนที่ระดับตำบลทั้งประเทศมีข้อมูลมากเกินไป <br> ดังนั้น เพื่อการแสดงผลที่สมบูรณ์ กรุณาเลือกพื้นที่เพื่อดูรายละเอียด",
       buttons: ["ตกลง"],
-      
+
     });
     alert.present();
   }
 
   ionViewDidLoad() {
-    this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph)
+    setTimeout(() => {
+      this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph)
+    }, 500);
   }
 }

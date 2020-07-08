@@ -13,7 +13,9 @@ export class WmiMenuPage {
   allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiZWRkZTY3MzktMDc4MC00YzBiLThiMzItMjFmMzk4MTAwODgyIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D";
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController) {
     this.menu.enable(false, "myMenu");
-    this.allInThailandGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.allInThailand);
+    setTimeout(() => {
+      this.allInThailandGraph = this.sanitizer.bypassSecurityTrustResourceUrl(this.allInThailand);
+    }, 500);
   }
 
 }
