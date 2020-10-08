@@ -16,7 +16,7 @@ export class WaterIndexPage {
   public subWMI: SubWMI[] = null;
   public indexValue: IndexWWMI[] = null;
 
-  firstGraph = 'https://app.powerbi.com/view?r=eyJrIjoiYTEzZjRhZjItNGQ0Yy00N2IwLThhZjEtZmRmOGM1ZTBhYThhIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D';
+  firstGraph = 'https://app.powerbi.com/view?r=eyJrIjoiMmIzMTBmOWItOGFjOC00OGQ1LWI4NTgtNDNlMDA0NGFhMjRjIiwidCI6ImE5MDhlNDg0LWE0M2ItNDE2ZC05NTY3LTZmYjUzMWY3ZTA4MCIsImMiOjEwfQ%3D%3D';
   public graph: SafeResourceUrl;
   WMImenu: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController, public alertCtrl: AlertController) {

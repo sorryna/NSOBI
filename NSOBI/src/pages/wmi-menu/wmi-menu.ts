@@ -10,7 +10,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 export class WmiMenuPage {
   public allInThailandGraph: SafeResourceUrl;
   WMImenu: any;
-  allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiZWRkZTY3MzktMDc4MC00YzBiLThiMzItMjFmMzk4MTAwODgyIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D";
+  allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiMWZhMWIxNmEtOTE1NS00YTVhLThjOTItYTkyM2EwOTg2N2QwIiwidCI6ImE5MDhlNDg0LWE0M2ItNDE2ZC05NTY3LTZmYjUzMWY3ZTA4MCIsImMiOjEwfQ%3D%3D";
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController) {
     this.menu.enable(false, "myMenu");
     setTimeout(() => {

@@ -11,7 +11,7 @@ export class WaterWmiPage {
 
   public allInThailandGraph: SafeResourceUrl;
   WMImenu: any;
-  allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiZTU4MzY2NmEtZjA1OS00MDc2LThmZWItMzBhNGZkMGZkN2ZkIiwidCI6IjkzNzkzY2VmLTM0MDAtNGJkYi04MWY0LTkyNWNjYjNhNjkyNCIsImMiOjEwfQ%3D%3D";
+  allInThailand = "https://app.powerbi.com/view?r=eyJrIjoiYWZkNzhhY2YtZmQ1MC00OGQ1LTlkMzEtZjBjMzM0MTVjMDUyIiwidCI6ImE5MDhlNDg0LWE0M2ItNDE2ZC05NTY3LTZmYjUzMWY3ZTA4MCIsImMiOjEwfQ%3D%3D";
   constructor(public navCtrl: NavController, public navParams: NavParams, public sanitizer: DomSanitizer, public menu: MenuController) {
     this.menu.enable(false, "myMenu");
     setTimeout(() => {
