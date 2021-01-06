@@ -18,4 +18,11 @@ export class InfoFirstPage {
     console.log('ionViewDidLoad InfoFirstPage');
   }
 
+  goToPage(page) {
+    if (page == 'HomePage') {
+      this.navCtrl.popToRoot();
+    } else {
+      this.navCtrl.push(page);
+    }
+  }
 }

@@ -17,4 +17,11 @@ export class InfofourthPage {
     console.log('ionViewDidLoad InfofourthPage');
   }
   
+  goToPage(page) {
+    if (page == 'HomePage') {
+      this.navCtrl.popToRoot();
+    } else {
+      this.navCtrl.push(page);
+    }
+  }
 }

@@ -17,4 +17,11 @@ export class InfoSecondPage {
     console.log('ionViewDidLoad InfoSecondPage');
   }
 
+  goToPage(page) {
+    if (page == 'HomePage') {
+      this.navCtrl.popToRoot();
+    } else {
+      this.navCtrl.push(page);
+    }
+  }
 }

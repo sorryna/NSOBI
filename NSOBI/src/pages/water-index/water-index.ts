@@ -39,4 +39,12 @@ export class WaterIndexPage {
       this.graph = this.sanitizer.bypassSecurityTrustResourceUrl(this.firstGraph)
     }, 500);
   }
+
+  goToPage(page) {
+    if (page == 'HomePage') {
+      this.navCtrl.popToRoot();
+    } else {
+      this.navCtrl.push(page);
+    }
+  }
 }

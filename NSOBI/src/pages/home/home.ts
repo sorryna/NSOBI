@@ -21,4 +21,8 @@ export class HomePage {
     this.menu.enable(false, "myMenu");
   }
 
+  goToPage(page) {
+    this.navCtrl.push(page);
+  }
+
 }

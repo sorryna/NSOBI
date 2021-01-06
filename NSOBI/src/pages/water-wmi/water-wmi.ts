@@ -23,4 +23,11 @@ export class WaterWmiPage {
     console.log('ionViewDidLoad WaterWmiPage');
   }
 
+  goToPage(page) {
+    if (page == 'HomePage') {
+      this.navCtrl.popToRoot();
+    } else {
+      this.navCtrl.push(page);
+    }
+  }
 }

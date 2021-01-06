@@ -18,4 +18,11 @@ export class WmiMenuPage {
     }, 500);
   }
 
+  goToPage(page) {
+    if (page == 'HomePage') {
+      this.navCtrl.popToRoot();
+    } else {
+      this.navCtrl.push(page);
+    }
+  }
 }
